@@ -7,6 +7,7 @@ yarn-error.log*
 # Angular
 out-tsc/
 coverage/
+.angular/cache/
 
 # Python
 __pycache__/
