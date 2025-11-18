@@ -1,46 +1,59 @@
-# epl-scores Frontend
+# Frontend
 
-This directory contains the Angular frontend for the epl-scores project. 
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.3.
 
-## Getting Started
+## Development server
 
-To get started with the frontend, follow these steps:
+To start a local development server, run:
 
-1. **Install Node.js**: Ensure that you have Node.js installed on your machine. You can download it from [nodejs.org](https://nodejs.org/).
+```bash
+ng serve
+```
 
-2. **Install Angular CLI**: If you haven't already, install the Angular CLI globally using npm:
-   ```
-   npm install -g @angular/cli
-   ```
+Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-3. **Navigate to the Frontend Directory**:
-   ```
-   cd epl-scores/frontend
-   ```
+## Code scaffolding
 
-4. **Install Dependencies**: Run the following command to install the necessary dependencies:
-   ```
-   npm install
-   ```
+Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
 
-5. **Run the Application**: Start the development server with:
-   ```
-   ng serve
-   ```
+```bash
+ng generate component component-name
+```
 
-   You can then access the application at `http://localhost:4200`.
+For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
 
-## Project Structure
+```bash
+ng generate --help
+```
 
-- **src/app**: Contains the main application code, including components, services, and modules.
-- **src/assets**: Holds static assets such as images and stylesheets.
-- **angular.json**: Configuration file for the Angular project.
-- **package.json**: Lists the npm dependencies and scripts for the frontend.
+## Building
 
-## Contributing
+To build the project run:
 
-If you would like to contribute to the project, please fork the repository and submit a pull request with your changes.
+```bash
+ng build
+```
 
-## License
+This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+## Running unit tests
+
+To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+
+```bash
+ng test
+```
+
+## Running end-to-end tests
+
+For end-to-end (e2e) testing, run:
+
+```bash
+ng e2e
+```
+
+Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+
+## Additional Resources
+
+For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
