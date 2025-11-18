@@ -1,0 +1,27 @@
+# Node.js
+node_modules/
+dist/
+npm-debug.log*
+yarn-error.log*
+
+# Angular
+out-tsc/
+coverage/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+venv/
+*.env
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# Others
+*.log
