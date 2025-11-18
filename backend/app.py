@@ -1,14 +1,37 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
+import requests
 
 app = Flask(__name__)
 
 @app.route('/api/scores', methods=['GET'])
 def get_scores():
-    # Placeholder for actual score data
-    scores = [
-        {"team1": "Team A", "team2": "Team B", "score": "1-2"},
-        {"team1": "Team C", "team2": "Team D", "score": "3-1"}
-    ]
+    # Get date from query params, default to today if not provided
+    date = request.args.get('date')
+    url = "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard"
+    if date:
+        url += f"?dates={date}"
+
+    headers = {
+        "cache-control": "no-cache"
+    }
+    response = requests.get(url, headers=headers)
+    data = response.json()
+
+    events = data.get("events", [])
+    scores = []
+    for event in events:
+        competition = event.get("competitions", [])[0]
+        home = competition["competitors"][0]
+        away = competition["competitors"][1]
+        scores.append({
+            "home_team": home["team"]["displayName"],
+            "home_score": home["score"],
+            "away_team": away["team"]["displayName"],
+            "away_score": away["score"],
+            "venue": competition["venue"]["fullName"],
+            "status": competition["status"]["type"]["description"]
+        })
+
     return jsonify(scores)
 
 if __name__ == '__main__':
