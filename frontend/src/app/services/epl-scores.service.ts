@@ -13,7 +13,7 @@ export class EplScoresService {
   getScores(date?: string): Observable<any> {
     let url = this.apiUrl;
     if (date) {
-      url += `?dates=${date}`;
+      url += `?date=${date}`;
     }
     return this.http.get(url);
   }
