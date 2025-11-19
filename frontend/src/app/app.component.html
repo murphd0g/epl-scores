@@ -2,7 +2,12 @@
 <p>Welcome to EPL Scores!</p>
 
 <label for="date">Enter date (YYYYMMDD):</label>
-<input id="date" [(ngModel)]="date" placeholder="e.g. 20251118" />
+<input
+  id="date"
+  [(ngModel)]="date"
+  placeholder="e.g. 20251118"
+  (keyup.enter)="fetchScores()"
+/>
 <button (click)="fetchScores()">Get Scores</button>
 
 <ul>
