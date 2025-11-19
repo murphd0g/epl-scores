@@ -5,18 +5,27 @@ The epl-scores project is a web application that provides real-time scores and u
 
 ## Project Structure
 ```
-epl-scores
-├── backend
+epl-scores/
+├── backend/
 │   ├── app.py
 │   ├── requirements.txt
 │   └── README.md
-├── frontend
-│   ├── src
-│   │   ├── app
-│   │   └── assets
+├── frontend/
 │   ├── angular.json
 │   ├── package.json
-│   └── README.md
+│   ├── public/
+│   │   └── favicon.ico
+│   ├── README.md
+│   ├── src/
+│   │   ├── app/
+│   │   │   └── services/
+│   │   ├── index.html
+│   │   ├── main.ts
+│   │   └── styles.css
+│   ├── tsconfig.app.json
+│   ├── tsconfig.json
+│   └── tsconfig.spec.json
+├── .gitignore
 └── README.md
 ```
 
